@@ -1,5 +1,5 @@
-import Contact from '@/components/home/Contact'
-import Footer from '@/components/home/Footer'
+import Contact from '@/components/client/Contact'
+import Footer from '@/components/client/Footer'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import { SquareChevronRight } from 'lucide-react'
