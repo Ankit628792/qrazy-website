@@ -3,7 +3,7 @@ import React from 'react'
 
 function Navbar() {
     return (
-        <nav className='flex items-center justify-between gap-10 py-2 rounded-full px-5 lg:px-4 w-full mt-3 max-w-5xl fixed transform left-1/2 -translate-x-1/2 bg-gray-50 dark:bg-gray-950 bg-opacity-50 backdrop-blur-sm bd'>
+        <nav className='flex items-center justify-between gap-10 py-2 rounded-full px-5 lg:px-4 w-full mt-3 max-w-5xl fixed transform left-1/2 -translate-x-1/2 bg-gray-50 dark:bg-gray-950 bg-opacity-50 backdrop-blur-sm bd z-50'>
             <Link href={"/"}>
                 <h3 className='text-3xl font-bold text-sky-50 pl-2 leading-none'>Qrazy</h3>
             </Link>
