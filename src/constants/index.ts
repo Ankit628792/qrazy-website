@@ -1,86 +1,53 @@
 import { Icons } from "@/components";
 
-export const perks = [
+export const features = [
     {
         icon: Icons.auth,
-        title: "Sign Up",
-        info: "Create your free account to get started with Qrazy.",
+        title: "Instant Product Verification",
+        info: "Simply scan the QR code to verify product authenticity in seconds.",
     },
     {
         icon: Icons.customize,
-        title: "Customize",
-        info: "Choose a template and customize it to fit your needs.",
+        title: "Earn While You Shop",
+        info: "Get cashback, coupons, and rewards for every valid scan.",
     },
     {
         icon: Icons.launch,
-        title: "Launch",
-        info: "Publish your website and share it with the world.",
+        title: "Report Counterfeit Products",
+        info: "Protect yourself and others by reporting fake products instantly.",
+    },
+    {
+        icon: Icons.auth,
+        title: "Warranty & After-Sales Support",
+        info: "Easily register & manage warranties with a simple scan.",
+    },
+    {
+        icon: Icons.customize,
+        title: "Get Exclusive Brand Offers",
+        info: "Brands reward you with special discounts & deals when you verify their products.",
+    },
+    {
+        icon: Icons.launch,
+        title: "Stay Secure & Informed",
+        info: "Make better shopping decisions with real-time product details and brand updates.",
     },
 ];
 
-export const features = [
+export const benefits = [
     {
         icon: Icons.bolt,
-        title: "Fast Setup",
-        info: "Get your website up and running in minutes with our intuitive AI-powered builder.",
+        title: "Cashback & Discounts",
+        info: "Earn real rewards for every valid product scan.",
     },
     {
         icon: Icons.palette,
-        title: "Customizable Templates",
-        info: "Choose from a variety of stunning templates and customize them to suit your brand.",
-    },
-    {
-        icon: Icons.seo,
-        title: "SEO Optimized",
-        info: "Built-in SEO features ensure your website ranks well on search engines.",
-    },
-    {
-        icon: Icons.monitor,
-        title: "Responsive Design",
-        info: "Your website will look great on any device, from desktops to mobile phones.",
-    },
-    {
-        icon: Icons.shop,
-        title: "E-Commerce Ready",
-        info: "Start selling online with our e-commerce features and integrations.",
+        title: "100% Genuine Products",
+        info: "Say goodbye to fake or low-quality goods.",
     },
     {
         icon: Icons.server,
-        title: "Secure Hosting",
-        info: "Enjoy peace of mind with secure and reliable hosting for your website.",
-    },
-];
-
-export const pricingCards = [
-    {
-        title: "Starter",
-        description: "Perfect for trying out plura",
-        price: "Free",
-        duration: "",
-        highlight: "Key features",
-        buttonText: "Start for free",
-        features: ["Limited projects", "1 Team member", "Basic features"],
-        priceId: "",
-    },
-    {
-        title: "Unlimited Saas",
-        description: "The ultimate agency kit",
-        price: "$199",
-        duration: "month",
-        highlight: "Key features",
-        buttonText: "Upgrade to Pro",
-        features: ["Unlimited projects", "5 Team members", "Advanced design tools", "Customizable domain"],
-        priceId: "price_1OYxkqFj9oKEERu1KfJGWxgN",
-    },
-    {
-        title: "Enterprise",
-        description: "For serious agency owners",
-        price: "$399",
-        duration: "month",
-        highlight: "Everything in Starter, plus",
-        buttonText: "Upgrade to Enterprise",
-        features: ["Unlimited projects", "Unlimited Team members", "Custom branding", "Priority support (24/7)"],
-        priceId: "price_1OYxkqFj9oKEERu1NbKUxXxN",
+        title: "Smart Purchase Decisions",
+        info: "Know everything about a product before you buy.",
     },
 ];
 
@@ -145,3 +112,73 @@ export const reviews = [
 ]
 
 
+export const faqs = [
+    {
+        question: "How do I earn rewards?",
+        answer: "Every time you scan a valid QR code on a product, you earn cashback, coupons, or discount vouchers based on the brand’s offer."
+    },
+    {
+        question: "How do I know if a product is original?",
+        answer: "Qrazy instantly verifies the product and alerts you if it's genuine or counterfeit."
+    },
+    {
+        question: "Can I report a fake product?",
+        answer: "Yes! You can report counterfeit products through the app, helping brands take action against fraud."
+    },
+    {
+        question: "Is Qrazy free to use?",
+        answer: "Absolutely! Qrazy is 100% free for users to scan, verify, and earn rewards."
+    },
+    {
+        question: "Which brands are supported?",
+        answer: "We are partnered with top brands across fashion, electronics, skincare, and more. Check the app for a full list!"
+    },
+]
+
+export const whyUseQrazy = [
+    {
+        icon: Icons.bolt,
+        title: "Ensure Product Authenticity Before Purchase",
+        info: "Scan the QR code to verify product authenticity in seconds.",
+    }, {
+        icon: Icons.bolt,
+        title: "Earn Cashback, Coupons & Exclusive Rewards",
+        info: "Get cashback, coupons, and rewards for every valid scan.",
+    }, {
+        icon: Icons.bolt,
+        title: "Report Counterfeit Products & Protect Yourself",
+        info: "Protect yourself and others by reporting fake products instantly.",
+    }, {
+        icon: Icons.bolt,
+        title: "Stay Updated on Product Warranties & Benefits",
+        info: "Easily register & manage warranties with a simple scan.",
+    }
+]
+
+export const howToUseQrazy = [
+    {
+        step: 1,
+        title: "Download the Qrazy App & Sign Up",
+        description: "Get started by downloading the Qrazy app from your app store and create an account to begin using it."
+    },
+    {
+        step: 2,
+        title: "Scan the QR Code on Any Product",
+        description: "Use the app to scan the QR code located on any product you wish to verify."
+    },
+    {
+        step: 3,
+        title: "Instantly Verify Its Authenticity",
+        description: "Once the QR code is scanned, the app will provide an instant verification of the product's authenticity."
+    },
+    {
+        step: 4,
+        title: "Earn Cashback, Coupons & Rewards",
+        description: "By verifying products, you can earn cashback, coupons, and rewards that can be used on future purchases."
+    },
+    {
+        step: 5,
+        title: "Report Counterfeit Products & Help Others",
+        description: "If you encounter counterfeit products, report them via the app to help protect others from fraud."
+    }
+];

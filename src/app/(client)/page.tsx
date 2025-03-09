@@ -1,12 +1,12 @@
 import { Container, Icons, Wrapper } from "@/components";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { BorderBeam } from "@/components/ui/border-beam";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { LampContainer } from "@/components/ui/lamp";
 import Marquee from "@/components/ui/marquee";
 import SectionBadge from "@/components/ui/section-badge";
-import { features, perks, pricingCards, reviews } from "@/constants";
+import { benefits, faqs, features, howToUseQrazy, reviews, whyUseQrazy } from "@/constants";
 import { cn } from "@/lib/utils";
 import { ArrowRight, ChevronRight, User, Zap } from "lucide-react";
 import Image from "next/image";
@@ -19,6 +19,7 @@ const HomePage = () => {
 
     return (
         <section className="w-full relative flex flex-col items-center justify-center px-4 md:px-0 py-8">
+            {/* Header  */}
             <Wrapper>
                 <Container>
                     <div className="flex flex-col items-center justify-center py-20 w-full">
@@ -30,25 +31,25 @@ const HomePage = () => {
                             <span className="h-full w-full blur-md absolute bottom-0 inset-x-0 bg-gradient-to-tr from-primary/40"></span>
                             <span className="z-10 py-0.5 text-sm text-neutral-100 flex items-center justify-center gap-1.5">
                                 <Image src="/icons/sparkles-dark.svg" alt="✨" width={24} height={24} className="w-4 h-4" />
-                                Introducing Qrazy
+                                Introducing Qrazy 2.0
                                 <ChevronRight className="w-4 h-4" />
                             </span>
                         </button>
 
-                        <div className="flex flex-col items-center mt-8 max-w-3xl mx-auto w-11/12 md:w-full">
+                        <div className="flex flex-col items-center mt-8 max-w-4xl mx-auto w-11/12 md:w-full">
                             <h1 className="text-4xl md:text-6xl md:!leading-snug font-semibold text-center bg-clip-text bg-gradient-to-b from-gray-50 to-gray-100 text-transparent">
-                                Build your next idea and ship your dream site
+                                Scan, Verify & Earn Rewards!
                             </h1>
-                            <p className="text-base md:text-lg text-foreground/80 mt-6 text-center">
-                                Zero code, maximum speed. Make professional sites easy, fast and fun while delivering best-in-class SEO, performance.
+                            <p className="text-base md:text-lg text-foreground/80 text-center">
+                                Your Trust. Your Safety. Your Rewards.
                             </p>
                             <div className="hidden md:flex relative items-center justify-center mt-8 md:mt-12 w-full">
                                 <Link href={"/"} className="flex items-center justify-center w-max rounded-full border-t border-foreground/30 bg-white/20 backdrop-blur-lg px-2 py-1 md:py-2 md:gap-8 shadow-2xl shadow-foreground/30 cursor-pointer select-none">
                                     <p className="text-foreground text-sm text-center md:text-base font-medium pl-4 pr-4 lg:marker:pr-0">
-                                        ✨ Start building your dream website now!
+                                        ✨ See Qrazy in Action!
                                     </p>
                                     <Button size={"sm"} className="rounded-full hidden lg:flex border border-foreground/20">
-                                        Get Started
+                                        Download Now
                                         <ArrowRight className="w-4 h-4 ml-1" />
                                     </Button>
                                 </Link>
@@ -68,34 +69,36 @@ const HomePage = () => {
             </Wrapper>
 
 
-            <Wrapper className="flex flex-col items-center justify-center py-12 relative">
+            {/* Why use qrazy  */}
+            <Wrapper className="flex flex-col items-center justify-center py-12 md:py-20 relative">
+                <div className='hidden lg:block absolute top-1/2 -left-1/4 bg-primary w-72 h-72 rounded-full -z-10 blur-[14rem]'></div>
+
                 <Container>
-                    <div className="max-w-md md:mx-auto text-start md:text-center">
-                        <SectionBadge title="The Process" />
-                        <h2 className="text-3xl lg:text-4xl font-semibold mt-6">
-                            Three steps to build your dream website
+                    <div className="max-w-5xl md:mx-auto text-start md:text-center">
+                        <SectionBadge title="Your Trust. Your Safety. Your Rewards." />
+                        <h2 className="max-w-xl mx-auto text-3xl lg:text-4xl font-semibold mt-6">
+                            Scan & Verify Products While Earning Rewards!
                         </h2>
                         <p className="text-muted-foreground mt-6">
-                            Turn your vision into reality in just 3 simple steps
+                            Qrazy is your ultimate product authenticity checker that ensures you’re buying genuine products while also rewarding you! Simply scan the QR code on your product to verify its authenticity, report counterfeits, and earn cashbacks, discounts, and exciting coupons.
                         </p>
                     </div>
                 </Container>
 
-                <Container>
-                    <div className="flex flex-col items-center">
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full divide-x-0 md:divide-x divide-y md:divide-y-0 divide-gray-900 lg:first:border-none first:border-gray-900 ">
+                <Container className="w-full max-w-7xl m-5 my-10 md:my-20 rounded-3xl bg-gray-900">
+                    <div className="flex flex-col items-center justify-center py-10 gap-10 w-full">
+                        <SectionBadge title="Why Use Qrazy?" />
+                        <div className="grid grid-cols-1 md:grid-cols-2 max-w-3xl w-full gap-8">
                             {
-                                perks.map((perk) => (
-                                    <div key={perk.title} className="flex flex-col items-start px-4 md:px-6 lg:px-8 py-4 lg:py-6">
-                                        <div className="flex items-center justify-center">
-                                            <perk.icon className="w-8 h-8" />
+                                whyUseQrazy.map((item) => (
+                                    <div key={item.title} className="flex items-center gap-4 bg-gray-950 py-3 px-4 rounded-xl">
+                                        <div className="flex items-center justify-center bg-gray-800 rounded-full p-2">
+                                            <item.icon className="w-8 h-8" />
                                         </div>
-                                        <h3 className="text-lg font-medium mt-4">
-                                            {perk.title}
+                                        <h3 className="font-medium">
+                                            {item.title}
                                         </h3>
-                                        <p className="text-muted-foreground mt-2 text-start">
-                                            {perk.info}
-                                        </p>
+
                                     </div>
                                 ))
                             }
@@ -104,17 +107,19 @@ const HomePage = () => {
                 </Container>
             </Wrapper>
 
-            <Wrapper className="flex flex-col items-center justify-center py-12 relative">
+
+            {/* Benefits  */}
+            <Wrapper className="flex flex-col items-center justify-center py-12 lg:py-20 relative">
                 <div className='hidden lg:block absolute top-1/2 -right-1/4 bg-primary w-72 h-72 rounded-full -z-10 blur-[14rem]'></div>
 
                 <Container>
-                    <div className="max-w-md md:mx-auto text-start md:text-center">
-                        <SectionBadge title="Features" />
+                    <div className="max-w-xl md:mx-auto text-start md:text-center">
+                        <SectionBadge title="Benefits" />
                         <h2 className="text-3xl lg:text-4xl font-semibold mt-6">
-                            Discover our powerful features
+                            Scan Smart. Shop Safe.
                         </h2>
                         <p className="text-muted-foreground mt-6">
-                            Qrazy offers a range of features to help you build a stunning websites in no time
+                            Make better shopping decisions with real-time product details and brand updates.
                         </p>
                     </div>
                 </Container>
@@ -126,10 +131,45 @@ const HomePage = () => {
 
                 <Container>
                     <div className="flex flex-col items-center justify-center py-10 md:py-20 w-full">
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full gap-8">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full gap-8 divide-x-0 md:divide-x divide-gray-900">
+                            {
+                                benefits.map((benefit) => (
+                                    <div key={benefit.title} className="flex flex-col items-center px-0">
+                                        <div className="flex items-center justify-center">
+                                            <benefit.icon className="w-8 h-8" />
+                                        </div>
+                                        <h3 className="text-lg font-medium mt-4">
+                                            {benefit.title}
+                                        </h3>
+                                        <p className="text-muted-foreground mt-2 text-start">
+                                            {benefit.info}
+                                        </p>
+                                    </div>
+                                ))
+                            }
+                        </div>
+                    </div>
+                </Container>
+            </Wrapper>
+
+
+            {/* Features  */}
+            <Wrapper className="flex flex-col items-center justify-center py-12 lg:py-20 relative">
+                <Container>
+                    <div className="max-w-xl md:mx-auto text-start md:text-center">
+                        <SectionBadge title="Feature" />
+                        <h2 className="text-3xl lg:text-4xl font-semibold mt-6">
+                            Shopping just got smarter, safer & more rewarding!
+                        </h2>
+                    </div>
+                </Container>
+
+                <Container>
+                    <div className="flex flex-col items-center mt-10">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full ">
                             {
                                 features.map((feature) => (
-                                    <div key={feature.title} className="flex flex-col items-start px-0">
+                                    <div key={feature.title} className="flex flex-col items-start px-4 md:px-6 lg:px-8 py-4 lg:py-6 border border-transparent rounded-lg hover:border-gray-900 transition-all duration-150">
                                         <div className="flex items-center justify-center">
                                             <feature.icon className="w-8 h-8" />
                                         </div>
@@ -147,66 +187,52 @@ const HomePage = () => {
                 </Container>
             </Wrapper>
 
-            <Wrapper className="flex flex-col items-center justify-center py-12 relative">
-                <div className='hidden lg:block absolute bottom-0 -left-1/4 bg-primary w-72 h-72 rounded-full -z-10 blur-[14rem]'></div>
 
+            {/* How to use qrazy ? */}
+            <Wrapper className="flex flex-col items-center justify-center gap-20 py-12 lg:py-20 relative">
                 <Container>
-                    <div className="max-w-md md:mx-auto text-start md:text-center">
-                        <SectionBadge title="Pricing" />
+                    <div className="max-w-xl md:mx-auto text-center md:text-center flex flex-col  items-center">
+                        <SectionBadge title="Scan Smart. Shop Safe. Earn More." />
                         <h2 className="text-3xl lg:text-4xl font-semibold mt-6">
-                            Unlock the right plan for your business
+                            Get Started with Qrazy 🚀
                         </h2>
-                        <p className="text-muted-foreground mt-6">
-                            Choose the best plan for your business and start building your dream website today
-                        </p>
+                        <p className="text-muted-foreground mt-4">That’s it! Safe shopping & exciting rewards in just one scan!</p>
                     </div>
                 </Container>
-                <Container className="flex items-center justify-center">
-                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 w-full md:gap-8 py-10 md:py-20 flex-wrap max-w-4xl">
-                        {
-                            pricingCards.map((card) => {
-                                let active = card.title == "Unlimited Saas"
-                                return (
-                                    <Card key={card.title} className={cn("flex flex-col w-full border-neutral-700", active && "border-2 border-primary")}>
-                                        <CardHeader className="border-b-2 border-border">
-                                            <span>{card.title}</span>
-                                            <CardTitle className={cn(!active && "text-muted-foreground")}>
-                                                {card.price}
-                                            </CardTitle>
-                                            <CardDescription>
-                                                {card.description}
-                                            </CardDescription>
-                                        </CardHeader>
-                                        <CardContent className="pt-6 space-y-3">
-                                            {card.features.map((feature) => (
-                                                <div key={feature} className="flex items-center gap-2">
-                                                    <Zap className="w-4 h-4 fill-primary text-primary" />
-                                                    <p>{feature}</p>
-                                                </div>
-                                            ))}
-                                        </CardContent>
-                                        <CardFooter className="mt-auto w-full">
-                                            <Link href={"#"} className={cn("w-full text-center text-primary-foreground bg-primary p-2 rounded-md text-sm font-medium", !active && "!bg-foreground !text-background")}>
-                                                {card.buttonText}
-                                            </Link>
-                                        </CardFooter>
-                                    </Card>
-                                )
-                            })
-                        }
-                    </div>
-                </Container>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-10 sm:px-5 max-w-6xl mx-auto">
+                    {
+                        howToUseQrazy.map((item, i) => (
+                            <Container className={cn("flex flex-col items-center gap-6 lg:gap-16 bg-gray-900 p-5 lg:py-10 lg:px-16 rounded-3xl", i % 2 == 0 ? "lg:flex-row" : "lg:flex-row-reverse")}>
+                                <div className={cn("w-full max-w-xs h-60 lg:h-80 lg:max-w-sm rounded-2xl transform overflow-hidden", i % 2 == 0 ? "lg:-skew-x-6" : "lg:skew-x-6")}>
+                                    <img src="https://images.unsplash.com/photo-1666157112233-2f5a55bb7df0" className="w-full h-full object-cover" alt="" />
+                                </div>
+                                <div className={cn("flex flex-col items-center text-center gap-2", i % 2 ? "lg:items-end lg:text-right" : "lg:items-start lg:text-start")}>
+                                    <SectionBadge title={"Step 0" + item.step} />
+                                    <h3 className="text-lg font-medium">
+                                        {item.title}
+                                    </h3>
+                                    <p className="text-muted-foreground">
+                                        {item.description}
+                                    </p>
+                                </div>
+                            </Container>
+                        ))
+                    }
+                </div>
             </Wrapper>
 
-            <Wrapper className="flex flex-col items-center justify-center py-12 relative">
+
+            {/* Reviews  */}
+            <Wrapper className="flex flex-col items-center justify-center py-12 lg:py-20 relative">
                 <Container>
-                    <div className="max-w-md mx-auto text-start md:text-center">
+                    <div className="max-w-xl mx-auto text-start md:text-center">
                         <SectionBadge title="Our Customers" />
                         <h2 className="text-3xl lg:text-4xl font-semibold mt-6">
                             What people are saying
                         </h2>
                         <p className="text-muted-foreground mt-6">
-                            See how Qrazy empowers business of all sizes. Here&apos;s what real people are saying on Twitter
+                            Real Customer Reviews & Success Stories
                         </p>
                     </div>
                 </Container>
@@ -265,26 +291,72 @@ const HomePage = () => {
                 </Container>
             </Wrapper>
 
+
+            {/* FAQs  */}
             <Wrapper className="flex flex-col items-center justify-center py-12 relative">
+                <Container>
+                    <div className="max-w-xl md:mx-auto text-start md:text-center">
+                        <SectionBadge title="Have Questions?" />
+                        <h2 className="text-3xl lg:text-4xl font-semibold mt-6">
+                            Frequently Asked Questions
+                        </h2>
+                    </div>
+                </Container>
+
+                <Container>
+                    <div className="flex flex-col items-center justify-center py-10 w-full">
+                        <div className="grid grid-cols-1 max-w-3xl w-full gap-8 divide-x-0 md:divide-x divide-gray-900">
+                            <Accordion type="single" collapsible className="w-full">
+                                {
+                                    faqs.map(faq => (
+                                        <AccordionItem value={faq.question} className="border-b-gray-900">
+                                            <AccordionTrigger>{faq.question}</AccordionTrigger>
+                                            <AccordionContent className="text-muted-foreground">
+                                                {faq.answer}
+                                            </AccordionContent>
+                                        </AccordionItem>
+                                    ))
+                                }
+                            </Accordion>
+
+                        </div>
+                    </div>
+                </Container>
+            </Wrapper>
+
+            {/* Download  */}
+            <Wrapper className="flex flex-col items-center justify-center py-12 lg:py-20 relative">
                 <Container>
                     <LampContainer>
                         <div className="flex flex-col items-center justify-center relative w-full text-center">
+
                             <h2 className="text-4xl lg:text-5xl xl:text-6xl lg:!leading-snug font-semibold mt-8">
-                                From Idea to Launch <br />Faster Than Ever
+                                Start Using Qrazy Today!
                             </h2>
-                            <p className="text-muted-foreground mt-6 max-w-md mx-auto">
-                                Build stunning websites with Qrazy&apos;s intuitive drag-and-drop builder and powerful AI assistant
+                            <p className="text-muted-foreground mt-6 max-w-xl mx-auto">
+                                Verify your products. Protect yourself. Earn rewards.
                             </p>
-                            <Button variant={"white"} className="mt-6" asChild>
-                                <Link href={"#"}>
-                                    Get started for feature
-                                    <ArrowRight className="w-4 h-4 ml-2" />
-                                </Link>
-                            </Button>
+                            <div className="flex items-center gap-6 mt-6">
+                                <Button variant={"white"} className="w-40" asChild>
+                                    <Link href={"#"}>
+                                        Play Store
+                                        <ArrowRight className="w-4 h-4 ml-2" />
+                                    </Link>
+                                </Button>
+                                <Button variant={"white"} className="w-40" asChild>
+                                    <Link href={"#"}>
+                                        Download APK
+                                        <ArrowRight className="w-4 h-4 ml-2" />
+                                    </Link>
+                                </Button>
+                            </div>
+                            <SectionBadge className="mt-6" title="Start Scanning" />
                         </div>
                     </LampContainer>
                 </Container>
 
+
+                {/* Newsletter */}
                 <Container className="relative z-[99999]">
                     <div className="flex items-center justify-center w-full -mt-40">
                         <div className="flex flex-col md:flex-row items-start md:items-center justify-start md:justify-between w-full px-4 md:px-8 rounded-lg lg:rounded-2xl border border-border/80 py-4 md:py-8">
@@ -293,7 +365,7 @@ const HomePage = () => {
                                     Join our newsletter
                                 </h4>
                                 <p className="text-base text-muted-foreground">
-                                    Be up to date with everything about AI builder
+                                    Be up to date with everything about Qrazy
                                 </p>
                             </div>
                             <div className="flex flex-col items-start gap-2 md:min-w-80 mt-5 md:mt-0 w-full md:w-max">
