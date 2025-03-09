@@ -44,7 +44,7 @@ const HomePage = () => {
                                 Your Trust. Your Safety. Your Rewards.
                             </p>
                             <div className="hidden md:flex relative items-center justify-center mt-8 md:mt-12 w-full">
-                                <Link href={"/"} className="flex items-center justify-center w-max rounded-full border-t border-foreground/30 bg-white/20 backdrop-blur-lg px-2 py-1 md:py-2 md:gap-8 shadow-2xl shadow-foreground/30 cursor-pointer select-none">
+                                <Link href={"#download"} className="flex items-center justify-center w-max rounded-full border-t border-foreground/30 bg-white/20 backdrop-blur-lg px-2 py-1 md:py-2 md:gap-8 shadow-2xl shadow-foreground/30 cursor-pointer select-none">
                                     <p className="text-foreground text-sm text-center md:text-base font-medium pl-4 pr-4 lg:marker:pr-0">
                                         ✨ See Qrazy in Action!
                                     </p>
@@ -60,7 +60,7 @@ const HomePage = () => {
                             <div className="absolute top-1/2 left-1/2 -z-10 gradient w-3/4 -translate-x-1/2 -translate-y-1/2 h-3/4 inset-0 blur-[10rem]">
                             </div>
                             <div className="-m-2 md:-m-4 rounded-xl p-2 ring-1 ring-inset ring-foreground/20 lg:rounded-2xl bg-opacity-50 backdrop-blur-lg">
-                                <Image src={"/assets/dashboard.svg"} alt="Dashboard" width={1200} height={1200} objectFit="contain" className="rounded-md lg:rounded-xl bg-foreground/10 shadow-2xl ring-1 ring-border" />
+                                <Image src={"/assets/header.png"} alt="Dashboard" width={1200} height={1200} objectFit="cover" className="rounded-md lg:rounded-xl bg-foreground/10 shadow-2xl ring-1 ring-border" />
                                 <BorderBeam size={250} duration={12} delay={9} />
                             </div>
                         </div>
@@ -109,7 +109,7 @@ const HomePage = () => {
 
 
             {/* Benefits  */}
-            <Wrapper className="flex flex-col items-center justify-center py-12 lg:py-20 relative">
+            <Wrapper id="benefits" className="flex flex-col items-center justify-center py-12 lg:py-20 relative">
                 <div className='hidden lg:block absolute top-1/2 -right-1/4 bg-primary w-72 h-72 rounded-full -z-10 blur-[14rem]'></div>
 
                 <Container>
@@ -154,7 +154,7 @@ const HomePage = () => {
 
 
             {/* Features  */}
-            <Wrapper className="flex flex-col items-center justify-center py-12 lg:py-20 relative">
+            <Wrapper id="features" className="flex flex-col items-center justify-center py-12 lg:py-20 relative">
                 <Container>
                     <div className="max-w-xl md:mx-auto text-start md:text-center">
                         <SectionBadge title="Feature" />
@@ -189,7 +189,7 @@ const HomePage = () => {
 
 
             {/* How to use qrazy ? */}
-            <Wrapper className="flex flex-col items-center justify-center gap-20 py-12 lg:py-20 relative">
+            <Wrapper id="how-it-works" className="flex flex-col items-center justify-center gap-20 py-12 lg:py-20 relative">
                 <Container>
                     <div className="max-w-xl md:mx-auto text-center md:text-center flex flex-col  items-center">
                         <SectionBadge title="Scan Smart. Shop Safe. Earn More." />
@@ -203,9 +203,9 @@ const HomePage = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-10 sm:px-5 max-w-6xl mx-auto">
                     {
                         howToUseQrazy.map((item, i) => (
-                            <Container className={cn("flex flex-col items-center gap-6 lg:gap-16 bg-gray-900 p-5 lg:py-10 lg:px-16 rounded-3xl", i % 2 == 0 ? "lg:flex-row" : "lg:flex-row-reverse")}>
+                            <Container key={item.title} className={cn("flex flex-col items-center gap-6 lg:gap-16 bg-gray-900 p-5 lg:py-10 lg:px-16 rounded-3xl", i % 2 == 0 ? "lg:flex-row" : "lg:flex-row-reverse")}>
                                 <div className={cn("w-full max-w-xs h-60 lg:h-80 lg:max-w-sm rounded-2xl transform overflow-hidden", i % 2 == 0 ? "lg:-skew-x-6" : "lg:skew-x-6")}>
-                                    <img src="https://images.unsplash.com/photo-1666157112233-2f5a55bb7df0" className="w-full h-full object-cover" alt="" />
+                                    <img src={item.image} className="w-full h-full object-cover" alt="" />
                                 </div>
                                 <div className={cn("flex flex-col items-center text-center gap-2", i % 2 ? "lg:items-end lg:text-right" : "lg:items-start lg:text-start")}>
                                     <SectionBadge title={"Step 0" + item.step} />
@@ -293,7 +293,7 @@ const HomePage = () => {
 
 
             {/* FAQs  */}
-            <Wrapper className="flex flex-col items-center justify-center py-12 relative">
+            <Wrapper id="faqs" className="flex flex-col items-center justify-center py-12 relative">
                 <Container>
                     <div className="max-w-xl md:mx-auto text-start md:text-center">
                         <SectionBadge title="Have Questions?" />
@@ -309,7 +309,7 @@ const HomePage = () => {
                             <Accordion type="single" collapsible className="w-full">
                                 {
                                     faqs.map(faq => (
-                                        <AccordionItem value={faq.question} className="border-b-gray-900">
+                                        <AccordionItem key={faq.question} value={faq.question} className="border-b-gray-900">
                                             <AccordionTrigger>{faq.question}</AccordionTrigger>
                                             <AccordionContent className="text-muted-foreground">
                                                 {faq.answer}
@@ -325,7 +325,7 @@ const HomePage = () => {
             </Wrapper>
 
             {/* Download  */}
-            <Wrapper className="flex flex-col items-center justify-center py-12 lg:py-20 relative">
+            <Wrapper id="download" className="flex flex-col items-center justify-center py-12 lg:py-20 relative">
                 <Container>
                     <LampContainer>
                         <div className="flex flex-col items-center justify-center relative w-full text-center">

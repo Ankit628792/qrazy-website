@@ -1,4 +1,5 @@
 import { LucideProps } from "lucide-react";
+import favicon from '/favicon.svg'
 
 type IconType = {
     [key: string]: (props: LucideProps) => JSX.Element;

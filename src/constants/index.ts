@@ -158,26 +158,31 @@ export const whyUseQrazy = [
 export const howToUseQrazy = [
     {
         step: 1,
+        image: "https://images.unsplash.com/photo-1666157112233-2f5a55bb7df0",
         title: "Download the Qrazy App & Sign Up",
         description: "Get started by downloading the Qrazy app from your app store and create an account to begin using it."
     },
     {
         step: 2,
+        image: "https://images.unsplash.com/photo-1666157112233-2f5a55bb7df0",
         title: "Scan the QR Code on Any Product",
         description: "Use the app to scan the QR code located on any product you wish to verify."
     },
     {
         step: 3,
+        image: "https://images.unsplash.com/photo-1666157112233-2f5a55bb7df0",
         title: "Instantly Verify Its Authenticity",
         description: "Once the QR code is scanned, the app will provide an instant verification of the product's authenticity."
     },
     {
         step: 4,
+        image: "https://images.unsplash.com/photo-1666157112233-2f5a55bb7df0",
         title: "Earn Cashback, Coupons & Rewards",
         description: "By verifying products, you can earn cashback, coupons, and rewards that can be used on future purchases."
     },
     {
         step: 5,
+        image: "https://images.unsplash.com/photo-1666157112233-2f5a55bb7df0",
         title: "Report Counterfeit Products & Help Others",
         description: "If you encounter counterfeit products, report them via the app to help protect others from fraud."
     }

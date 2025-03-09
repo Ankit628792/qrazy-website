@@ -1,6 +1,5 @@
 "use client"
 import Link from 'next/link'
-import Icons from '../global/icons'
 import { buttonVariants } from '../ui/button'
 
 function Navbar() {
@@ -11,7 +10,7 @@ function Navbar() {
             <div className='flex items-center justify-between h-full mx-auto md:max-w-screen-xl'>
                 <div className='flex items-start'>
                     <Link href={"/"} className='flex items-center gap-2'>
-                        <Icons.logo className='w-8 h-8' />
+                        <img src="/favicon.svg" className='w-7 h-7' alt="" />
                         <span className='text-lg font-medium'>Qrazy</span>
                     </Link>
 
@@ -20,22 +19,22 @@ function Navbar() {
                 <nav className="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform">
                     <ul className='flex items-center justify-center gap-8'>
                         <li className='hover:text-foreground/80 text-sm'>
-                            <Link href={"/"}>How it works</Link>
+                            <Link href={"#how-it-works"}>How it works</Link>
                         </li>
                         <li className='hover:text-foreground/80 text-sm'>
-                            <Link href={"/"}>Benefits</Link>
+                            <Link href={"#benefits"}>Benefits</Link>
                         </li>
                         <li className='hover:text-foreground/80 text-sm'>
-                            <Link href={"/"}>Features</Link>
+                            <Link href={"#features"}>Features</Link>
                         </li>
                         <li className='hover:text-foreground/80 text-sm'>
-                            <Link href={"/"}>FAQs</Link>
+                            <Link href={"#faqs"}>FAQs</Link>
                         </li>
                     </ul>
                 </nav>
 
                 <div className='flex items-center gap-4'>
-                    <Link href={"/login"} className={buttonVariants({ size: "sm", className: "hidden md:flex" })}>Download Now</Link>
+                    <Link href={"#download"} className={buttonVariants({ size: "sm", className: "hidden md:flex" })}>Download Now</Link>
                 </div>
             </div>
         </header>
