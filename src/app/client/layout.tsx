@@ -1,11 +1,12 @@
-import { Footer, Navbar } from '@/components';
+import Footer from '@/components/footer';
+import Navbar from '@/components/navbar';
 import React from 'react'
 
 interface Props {
     children: React.ReactNode;
 }
 
-const MarketingLayout = ({ children }: Props) => {
+const ClientLayout = ({ children }: Props) => {
     return (
         <div className="flex flex-col items-center w-full">
             <Navbar />
@@ -15,4 +16,4 @@ const MarketingLayout = ({ children }: Props) => {
     )
 };
 
-export default MarketingLayout
+export default ClientLayout

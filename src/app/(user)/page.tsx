@@ -1,4 +1,5 @@
 import { Container, Icons, Wrapper } from "@/components";
+import AnimationContainer from "@/components/global/animation-container";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { BorderBeam } from "@/components/ui/border-beam";
 import { Button } from "@/components/ui/button";
@@ -293,35 +294,48 @@ const HomePage = () => {
 
 
             {/* FAQs  */}
-            <Wrapper id="faqs" className="flex flex-col items-center justify-center py-12 relative">
-                <Container>
-                    <div className="max-w-xl md:mx-auto text-start md:text-center">
-                        <SectionBadge title="Have Questions?" />
-                        <h2 className="text-3xl lg:text-4xl font-semibold mt-6">
-                            Frequently Asked Questions
+            <Wrapper id="faqs" className="py-20 lg:py-32">
+                <div className="flex flex-col items-center text-center gap-4">
+                    <AnimationContainer animation="fadeUp" delay={0.2}>
+                        <SectionBadge title="FAQ" />
+                    </AnimationContainer>
+
+                    <AnimationContainer animation="fadeUp" delay={0.3}>
+                        <h2 className="text-2xl md:text-4xl lg:text-5xl font-medium !leading-tight text-transparent bg-clip-text bg-gradient-to-b from-foreground to-neutral-400">
+                            Still have questions?
                         </h2>
-                    </div>
-                </Container>
+                    </AnimationContainer>
 
-                <Container>
-                    <div className="flex flex-col items-center justify-center py-10 w-full">
-                        <div className="grid grid-cols-1 max-w-3xl w-full gap-8 divide-x-0 md:divide-x divide-gray-900">
-                            <Accordion type="single" collapsible className="w-full">
-                                {
-                                    faqs.map(faq => (
-                                        <AccordionItem key={faq.question} value={faq.question} className="border-b-gray-900">
-                                            <AccordionTrigger>{faq.question}</AccordionTrigger>
-                                            <AccordionContent className="text-muted-foreground">
-                                                {faq.answer}
-                                            </AccordionContent>
-                                        </AccordionItem>
-                                    ))
-                                }
-                            </Accordion>
+                    <AnimationContainer animation="fadeUp" delay={0.4}>
+                        <p className="text-sm md:text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto">
+                            Find answers to common questions about our PropEase
+                        </p>
+                    </AnimationContainer>
+                </div>
 
-                        </div>
-                    </div>
-                </Container>
+                <div className="max-w-3xl mx-auto pt-10">
+                    <Accordion type="single" collapsible className="w-full space-y-4">
+                        {faqs.map((item, index) => (
+                            <AnimationContainer
+                                key={index}
+                                animation="fadeUp"
+                                delay={0.5 + (index * 0.1)}
+                            >
+                                <AccordionItem
+                                    value={`item-${index}`}
+                                    className="border-none bg-[#191919] rounded-2xl px-6"
+                                >
+                                    <AccordionTrigger className="hover:no-underline py-6 text-base md:text-lg text-left font-normal">
+                                        {item.question}
+                                    </AccordionTrigger>
+                                    <AccordionContent className="text-muted-foreground text-left">
+                                        {item.answer}
+                                    </AccordionContent>
+                                </AccordionItem>
+                            </AnimationContainer>
+                        ))}
+                    </Accordion>
+                </div>
             </Wrapper>
 
             {/* Download  */}
