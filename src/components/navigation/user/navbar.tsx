@@ -140,7 +140,7 @@ const Navbar = () => {
                     <div className="flex items-center justify-between gap-x-4 w-full">
                         <AnimationContainer animation="fadeRight" delay={0.1}>
                             <Link href="/">
-                                <Icons.icon className="w-6 h-6" />
+                                <img src="/favicon.svg" className="w-6 h-6" />
                             </Link>
                         </AnimationContainer>
 
