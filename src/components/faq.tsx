@@ -1,8 +1,36 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger, } from "@/components/ui/accordion";
-import { FAQS } from '@/constants';
 import AnimationContainer from './global/animation-container';
 import Wrapper from "./global/wrapper";
 import SectionBadge from './ui/section-badge';
+
+export type FAQItem = {
+    question: string;
+    answer: string;
+};
+
+export const FAQS: FAQItem[] = [
+    {
+        question: "How does Qrazy prevent counterfeit products?",
+        answer: "Each QR code is unique and linked to our secure database, preventing duplication and fake product circulation."
+    },
+    {
+        question: "Can I customize the reward system?",
+        answer: "Yes! Admins can set custom reward limits based on product category and marketing goals."
+    },
+    {
+        question: "Is Qrazy suitable for small businesses?",
+        answer: "Absolutely! Qrazy is designed for both large enterprises and growing brands."
+    },
+    {
+        question: "How do I track scams and fraud attempts?",
+        answer: "The admin dashboard provides real-time reports on QR scans, customer behavior, and suspicious activity."
+    },
+    {
+        question: "What kind of support do you provide?",
+        answer: "We offer 24/7 customer support through multiple channels including live chat, email, and phone. Our dedicated support team is trained to help with technical issues, platform navigation, and best practices for management."
+    }
+];
+
 
 const FAQ = () => {
     return (

@@ -1,8 +1,34 @@
-import { FEATURES } from '@/constants';
 import Image from 'next/image';
 import AnimationContainer from './global/animation-container';
 import Wrapper from "./global/wrapper";
 import SectionBadge from './ui/section-badge';
+
+export const FEATURES = [
+    {
+        title: "Secure & Unique QR Code",
+        description: "Each product gets a one-of-a-kind QR code, ensuring authenticity and protection against duplication.",
+        image: "/images/f1.svg",
+        size: "large"
+    },
+    {
+        title: "Smart Analytics Dashboard",
+        description: "Get real-time data on product scans, market trends, and potential fraud attempts—all in one place.",
+        image: "/images/f2.svg",
+        size: "small"
+    },
+    {
+        title: "Customizable Reward System",
+        description: "Attract more customers with flexible cashback and coupon-based incentives for product scans.",
+        image: "/images/f3.svg",
+        size: "large"
+    },
+    {
+        title: "Global & Region-Based Insights",
+        description: "Understand where your products are being purchased and uncover new sales opportunities.",
+        image: "/images/f4.svg",
+        size: "small"
+    },
+];
 
 const Features = () => {
     return (
@@ -14,14 +40,13 @@ const Features = () => {
 
                 <AnimationContainer animation="fadeUp" delay={0.3}>
                     <h2 className="text-2xl md:text-4xl lg:text-5xl font-medium !leading-tight text-transparent bg-clip-text bg-gradient-to-b from-foreground to-neutral-400">
-                        Manage properties smarter
+                        How Qrazy Helps You?
                     </h2>
                 </AnimationContainer>
 
                 <AnimationContainer animation="fadeUp" delay={0.4}>
                     <p className="text-sm md:text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto">
-                        Experience the future of real estate with our all-in-one platform for seamless property management.
-                    </p>
+                        Qrazy doesn’t just protect your brand—it helps you grow!                    </p>
                 </AnimationContainer>
             </div>
 

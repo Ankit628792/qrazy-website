@@ -1,3 +1,4 @@
+import About from "@/components/about";
 import Analysis from "@/components/analysis";
 import Benefits from "@/components/benefits";
 import CTA from "@/components/cta";
@@ -16,6 +17,9 @@ const HomePage = () => {
             <section className="w-full">
                 <Hero />
             </section>
+            <section className="w-full" id="about">
+                <About />
+            </section>
 
             <section className="w-full">
                 <Perks />
@@ -24,13 +28,15 @@ const HomePage = () => {
             <section className="w-full">
                 <Benefits />
             </section>
-            <section className="w-full">
+
+            <section className="w-full" id="how-it-works">
                 <HowItWorks />
             </section>
 
-            <section className="w-full">
+            <section className="w-full" id="features">
                 <Features />
             </section>
+
             <section className="w-full">
                 <Analysis />
             </section>
@@ -40,18 +46,14 @@ const HomePage = () => {
             </section>
 
             <section className="w-full">
-                <Pricing />
-            </section>
-
-            <section className="w-full">
                 <PlatformMetrics />
             </section>
 
-            <section className="w-full">
+            <section className="w-full" id="faqs">
                 <FAQ />
             </section>
 
-            <section className="w-full">
+            <section className="w-full" id="get-started">
                 <CTA />
             </section>
         </div>

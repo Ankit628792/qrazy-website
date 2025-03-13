@@ -4,7 +4,7 @@ import Link from 'next/link'
 function Footer() {
 
     return (
-        <footer className='flex flex-col items-center justify-center border-t border-border pt-16 pb-8 px-6 lg:px-8 w-full max-w-6xl m-auto lg:pt-32 relative'>
+        <footer className='flex flex-col items-center justify-center border-t border-border pt-16 pb-8 px-6 lg:px-8 w-full max-w-6xl m-auto relative'>
 
             <div className='hidden lg:block absolute -top-1/3 -right-1/4 bg-primary w-72 h-72 rounded-full -z-10 blur-[14rem]'></div>
             <div className='hidden lg:block absolute bottom-0 -left-1/4 bg-primary w-72 h-72 rounded-full -z-10 blur-[14rem]'></div>
@@ -32,7 +32,7 @@ function Footer() {
                             <h3 className='text-base font-medium text-white'>
                                 Others
                             </h3>
-                            <ul className='mt-4 text-sm text-muted-foreground'>
+                            <ul className='mt-2 text-sm text-muted-foreground'>
                                 <li className='mt-2'>
                                     <Link href={"#features"} className='hover:text-foreground transition-all duration-300'>Features</Link>
                                 </li>
@@ -49,7 +49,7 @@ function Footer() {
                             <h3 className='text-base font-medium text-white'>
                                 Company
                             </h3>
-                            <ul className='mt-4 text-sm text-muted-foreground'>
+                            <ul className='mt-2 text-sm text-muted-foreground'>
                                 <li className='mt-2'>
                                     <Link href={"#"} className='hover:text-foreground transition-all duration-300'>About Us</Link>
                                 </li>
@@ -66,7 +66,7 @@ function Footer() {
             </div>
 
             <div className='mt-8 border-t border-border/80 pt-4 md:pt-8 md:flex md:items-center md:justify-between w-full'>
-                <p className='text-sm text-muted-foreground mt-4 md:mt-0'>
+                <p className='text-sm text-muted-foreground mt-4 md:mt-0 text-center w-full'>
                     &copy; {new Date().getFullYear()} Qrazy INC. All rights reserved.
                 </p>
             </div>

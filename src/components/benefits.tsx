@@ -2,7 +2,47 @@ import { cn } from "@/lib";
 import Image from "next/image";
 import { MagicCard } from "./ui/magic-card";
 import Container from "./global/container";
-import { BENEFITS } from "@/constants/benefits";
+
+import {
+    DatabaseIcon,
+    TrendingUpIcon,
+    WandSparklesIcon,
+    ZapIcon,
+    BarChartBigIcon
+} from "lucide-react";
+
+export const BENEFITS = [
+    {
+        title: "Enhance User Experience",
+        description: "Efficiently manage user data and interactions with advanced analytics and AI tools",
+        icon: WandSparklesIcon,
+        image: "/images/feature-two.svg",
+    },
+    {
+        title: "Comprehensive Insights",
+        description: "Gain deep insights into your audience and campaign performance",
+        icon: BarChartBigIcon,
+        image: "/images/feature-one.svg",
+    },
+    {
+        title: "Data Management",
+        description: "Manage your products information with ease and efficiency",
+        icon: DatabaseIcon,
+        image: "/images/feature-three.svg",
+    },
+    {
+        title: "Real-Time Analytics",
+        description: "Track and analyze your brand's marketing performance in real-time",
+        icon: TrendingUpIcon,
+        image: "/images/feature-four.svg",
+    },
+    {
+        title: "Boosted Customer Engagement",
+        description: "Encourage repeat purchases and brand loyalty.",
+        icon: ZapIcon,
+        image: "/images/feature-five.svg",
+    }
+]
 
 const Benefits = () => {
     return (
@@ -10,10 +50,10 @@ const Benefits = () => {
             <Container>
                 <div className="flex flex-col items-center text-center max-w-2xl mx-auto">
                     <h2 className="text-2xl md:text-4xl lg:text-5xl font-heading font-medium !leading-snug mt-6">
-                        AI-Powered marketing <br /> made <span className="font-subheading italic">simple</span>
+                        Benefits for Your <span className="font-subheading italic">Business</span>
                     </h2>
                     <p className="text-base md:text-lg text-center text-accent-foreground/80 mt-6">
-                        Transform your marketing with AI-powered automation. Create campaigns faster, generate better content, and make smarter decisions in minutes.
+                        Your brand deserves protection. Your customers deserve authenticity. Qrazy makes it possible.
                     </p>
                 </div>
             </Container>

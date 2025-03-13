@@ -142,7 +142,7 @@ const HomePage = () => {
                                         <h3 className="text-lg font-medium mt-4">
                                             {benefit.title}
                                         </h3>
-                                        <p className="text-muted-foreground mt-2 text-start">
+                                        <p className="text-muted-foreground mt-2 text-center">
                                             {benefit.info}
                                         </p>
                                     </div>

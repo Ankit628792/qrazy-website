@@ -1,9 +1,33 @@
-import { HOW_IT_WORKS } from "@/constants";
 import { cn } from "@/lib";
 import Image from "next/image";
 import AnimationContainer from './global/animation-container';
 import Wrapper from "./global/wrapper";
 import SectionBadge from "./ui/section-badge";
+
+export interface HowItWorksItem {
+    title: string;
+    description: string;
+    image: string;
+}
+
+export const HOW_IT_WORKS: HowItWorksItem[] = [
+    {
+        title: "Unique QR Codes",
+        description: "Generate secure and tamper-proof QR codes for your products to ensure authenticity and customer trust.",
+        image: "/images/hiw-one.svg"
+    },
+    {
+        title: "Print & Attach QR Codes",
+        description: "Easily print and integrate QR codes on product packaging, labels, or digital platforms for seamless verification.",
+        image: "/images/hiw-two.svg"
+    },
+    {
+        title: "Customers Scan the QR",
+        description: "Customers scan the QR code to verify product authenticity, access detailed information, and earn rewards.",
+        image: "/images/hiw-three.svg"
+    }
+];
+
 
 const HowItWorks = () => {
     return (
@@ -20,8 +44,8 @@ const HowItWorks = () => {
                 </AnimationContainer>
 
                 <AnimationContainer animation="fadeUp" delay={0.4}>
-                    <p className="text-sm md:text-base lg:text-lg text-muted-foreground max-w-lg mx-auto">
-                        Our three-step process simplifies real estate transactions and property management.
+                    <p className="text-sm md:text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto">
+                        Easily authenticate products, prevent counterfeits, and reward customers in just three simple steps with Qrazy!
                     </p>
                 </AnimationContainer>
             </div>
@@ -54,7 +78,7 @@ const HowItWorks = () => {
                                     {item.title}
                                 </h3>
                             </div>
-                            <div className="space-y-4 w-full">
+                            <div className="space-y-8 w-full">
                                 <AnimationContainer
                                     animation="fadeUp"
                                     delay={0.9 + (index * 0.2)}
@@ -71,7 +95,7 @@ const HowItWorks = () => {
                                     animation="fadeUp"
                                     delay={1.1 + (index * 0.2)}
                                 >
-                                    <p className="text-sm md:text-base text-muted-foreground">
+                                    <p className="text-sm md:text-base text-muted-foreground text-center">
                                         {item.description}
                                     </p>
                                 </AnimationContainer>

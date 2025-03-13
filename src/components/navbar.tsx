@@ -1,16 +1,29 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { NAV_LINKS } from "@/constants/nav-links";
 import { useClickOutside } from "@/hooks";
 import { cn } from "@/lib/cn";
 import { AnimatePresence, motion, useMotionValueEvent, useScroll } from "framer-motion";
-import { MenuIcon, XIcon } from "lucide-react";
 import Link from "next/link";
 import { RefObject, useRef, useState } from "react";
 import AnimationContainer from "./global/animation-container";
 import Icons from "./global/icons";
 import Wrapper from "./global/wrapper";
+
+const NAV_LINKS = [
+    {
+        name: "About",
+        link: "#about",
+    },
+    {
+        name: "Features",
+        link: "#features",
+    },
+    {
+        name: "FAQs",
+        link: "#faqs",
+    },
+];
 
 const Navbar = () => {
 
@@ -88,7 +101,7 @@ const Navbar = () => {
 
                     <AnimationContainer animation="fadeLeft" delay={0.1}>
                         <div className="flex items-center gap-x-4">
-                            <Link href="/signup">
+                            <Link href="#get-started">
                                 <Button size="sm" className="rounded-full">
                                     Get started
                                 </Button>
@@ -129,7 +142,7 @@ const Navbar = () => {
                         <AnimationContainer animation="fadeLeft" delay={0.1}>
                             <div className="flex items-center justify-center gap-x-4">
                                 <Button size="sm">
-                                    <Link href="/signup" className="flex items-center">
+                                    <Link href="#get-started" className="flex items-center">
                                         Get started
                                     </Link>
                                 </Button>
@@ -174,7 +187,7 @@ const Navbar = () => {
                                             Login
                                         </Button>
                                     </Link>
-                                    <Link href="/signup" className="w-full">
+                                    <Link href="#get-started" className="w-full">
                                         <Button
                                             onClick={() => setOpen(false)}
                                             variant="default"

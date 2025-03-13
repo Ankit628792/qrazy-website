@@ -24,25 +24,24 @@ const Hero = () => {
                 <div className="flex flex-col items-start gap-10 py-8 w-full">
                     <div className="flex flex-col items-start gap-4">
                         <AnimationContainer animation="fadeUp" delay={0.2}>
-                            <SectionBadge title="Trusted by 10,000+ Users" />
+                            <SectionBadge title="Introducing Qrazy 2.0" />
                         </AnimationContainer>
 
                         <AnimationContainer animation="fadeUp" delay={0.4}>
                             <h1 className="text-5xl lg:text-6xl font-medium !leading-tight text-transparent bg-clip-text bg-gradient-to-r from-foreground to-neutral-500">
-                                Effortless Real Estate Trading
+                                Qrazy – Protect, Market & Grow
                             </h1>
                         </AnimationContainer>
 
                         <AnimationContainer animation="fadeUp" delay={0.6}>
                             <p className="text-sm md:text-base lg:text-lg text-muted-foreground">
-                                Simplify your property journey with our comprehensive platform. Buy, sell, or manage properties with ease using our innovative tools and expert guidance.
-                            </p>
+                                A cutting-edge platform for businesses to generate QR codes for products and offer rewards to customers. Ensuring quality, authenticity, and effective marketing strategies.                            </p>
                         </AnimationContainer>
                     </div>
 
                     <AnimationContainer animation="fadeUp" delay={0.8}>
                         <div className="w-full">
-                            <Link href="/">
+                            <Link href="#get-started">
                                 <Button className="w-full md:w-auto">
                                     Start Now
                                 </Button>
@@ -76,7 +75,7 @@ const Hero = () => {
                             <div className="pointer-events-none hidden lg:block absolute inset-y-0 right-1/4 w-1/3 h-full bg-gradient-to-l from-background z-50"></div>
                             <div className="lg:absolute lg:inset-0">
                                 <Image
-                                    src="/images/dashboard.png"
+                                    src="/assets/header.png"
                                     alt="hero"
                                     sizes="1000px"
                                     width={1024}

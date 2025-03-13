@@ -61,7 +61,7 @@ const CTA = () => {
 
                     <AnimationContainer animation="fadeUp" delay={0.5}>
                         <p className="text-sm md:text-base lg:text-lg text-muted-foreground max-w-lg mx-auto mt-4">
-                            Sign up for a free trial and see how PropEase can help you manage your properties.
+                            Get started in minutes. Secure your products forever.
                         </p>
                     </AnimationContainer>
 
@@ -93,7 +93,7 @@ const CTA = () => {
                     </AnimationContainer>
 
                     <AnimationContainer animation="fadeUp" delay={1}>
-                        <Link href="/signin">
+                        <Link href="/register">
                             <Button size="lg" className="mt-6">
                                 Start now
                                 <ArrowRightIcon className="size-4 ml-2" />

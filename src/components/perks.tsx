@@ -1,9 +1,37 @@
-import { PERKS } from '@/constants';
 import { cn } from "@/lib";
 import Image from 'next/image';
 import AnimationContainer from './global/animation-container';
 import Wrapper from "./global/wrapper";
 import SectionBadge from './ui/section-badge';
+
+export interface PerkItem {
+    title: string;
+    description: string;
+    icon: string;
+}
+
+export const PERKS: PerkItem[] = [
+    {
+        title: "Counterfeit Protection",
+        description: "Instantly identify fake products.",
+        icon: "/icons/perk-one.svg"
+    },
+    {
+        title: "Product Re-Marketing",
+        description: "Convert buyers into loyal customers.",
+        icon: "/icons/perk-two.svg"
+    },
+    {
+        title: "Symbiotic Growth & Protection",
+        description: "Build trust and secure your brand identity.",
+        icon: "/icons/perk-three.svg"
+    },
+    {
+        title: "Market & Fraud Analytics",
+        description: "Understand product performance & detect counterfeit hotspots.",
+        icon: "/icons/perk-four.svg"
+    }
+];
 
 const Perks = () => {
     return (
@@ -15,15 +43,13 @@ const Perks = () => {
 
                 <AnimationContainer animation="fadeUp" delay={0.3}>
                     <h2 className="text-2xl md:text-4xl lg:text-5xl font-medium !leading-tight text-transparent bg-clip-text bg-gradient-to-b from-foreground to-neutral-400">
-                        Use our platform
-                        <br />
-                        with powerful tools
+                        What Does Qrazy Do?
                     </h2>
                 </AnimationContainer>
 
                 <AnimationContainer animation="fadeUp" delay={0.4}>
                     <p className="text-sm md:text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto">
-                        Seamlessly integrated tools for effortless property management.
+                        With Qrazy, your products are protected, your customers are engaged, and your sales grow.
                     </p>
                 </AnimationContainer>
             </div>
@@ -41,13 +67,12 @@ const Perks = () => {
                     </AnimationContainer>
                 </div>
 
-                <div className="grid grid-cols-2 relative z-20">
+                <div className="grid grid-cols-2 relative z-20 place-items-center">
                     {PERKS.map((perk, index) => (
                         <div
                             key={index}
                             className={cn(
                                 "flex items-center p-2 md:p-16",
-                                index % 2 === 0 ? "justify-end" : "justify-start"
                             )}
                         >
                             <AnimationContainer

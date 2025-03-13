@@ -1,10 +1,54 @@
-import { TESTIMONIALS } from '@/constants';
 import { Star } from 'lucide-react';
 import Image from 'next/image';
 import AnimationContainer from './global/animation-container';
 import Wrapper from "./global/wrapper";
 import Marquee from './ui/marquee';
 import SectionBadge from './ui/section-badge';
+
+export const TESTIMONIALS = [
+    {
+        content: "Since implementing Qrazy, we’ve reduced counterfeit issues by 80% and seen a 35% increase in customer trust.",
+        author: "Hemant",
+        role: " Luxury Skincare Brand",
+        image: "/images/person-one.jpg",
+        rating: 5
+    },
+    {
+        content: "Qrazy’s QR-based warranty system reduced our service fraud by 60% and improved after-sales service.",
+        author: "James",
+        role: "Electronics Manufacturer",
+        image: "/images/person-two.jpg",
+        rating: 4
+    },
+    {
+        content: "Market analytics from Qrazy helped us discover new regions for expansion, boosting sales by 25%.",
+        author: "Lucas",
+        role: "Global Apparel Brand",
+        image: "/images/person-four.jpeg",
+        rating: 5
+    },
+    {
+        content: "Since implementing Qrazy, we’ve reduced counterfeit issues by 80% and seen a 35% increase in customer trust.",
+        author: "Hemant",
+        role: " Luxury Skincare Brand",
+        image: "/images/person-one.jpg",
+        rating: 4
+    },
+    {
+        content: "Qrazy’s QR-based warranty system reduced our service fraud by 60% and improved after-sales service.",
+        author: "James",
+        role: "Electronics Manufacturer",
+        image: "/images/person-two.jpg",
+        rating: 5
+    },
+    {
+        content: "Market analytics from Qrazy helped us discover new regions for expansion, boosting sales by 25%.",
+        author: "Lucas",
+        role: "Global Apparel Brand",
+        image: "/images/person-four.jpeg",
+        rating: 5
+    },
+];
 
 const Testimonials = () => {
     return (
@@ -16,15 +60,13 @@ const Testimonials = () => {
 
                 <AnimationContainer animation="fadeUp" delay={0.3}>
                     <h2 className="text-2xl md:text-4xl lg:text-5xl font-medium !leading-tight text-transparent bg-clip-text bg-gradient-to-b from-foreground to-neutral-400">
-                        Loved by real estate
-                        <br />
-                        professionals
+                        Success Stories
                     </h2>
                 </AnimationContainer>
 
                 <AnimationContainer animation="fadeUp" delay={0.4}>
                     <p className="text-sm md:text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto">
-                        See what our users have to say about their experience with our platform
+                        See how brands are using Qrazy to protect their products and grow their business.
                     </p>
                 </AnimationContainer>
             </div>

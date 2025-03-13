@@ -30,10 +30,10 @@ const Analysis = () => {
                             <div className="absolute bottom-0 right-0 bg-blue-500 w-1/4 h-1/4 blur-[8rem] z-20"></div>
                             <div className="space-y-4">
                                 <h3 className="text-xl font-semibold">
-                                    Campaign Insights
+                                    Product Insights
                                 </h3>
                                 <p className="text-sm text-muted-foreground">
-                                    Track your campaign performance with data-driven insights.
+                                    Track your product performance with data-driven insights.
                                 </p>
 
                                 <div className="space-y-4">
@@ -59,15 +59,15 @@ const Analysis = () => {
 
                                     <div className="space-y-2">
                                         <div className="grid grid-cols-4 text-sm text-muted-foreground py-2">
-                                            <div>Campaign</div>
+                                            <div>Product</div>
                                             <div>Status</div>
                                             <div>Reach</div>
                                             <div>ROI</div>
                                         </div>
                                         {[
-                                            { name: "Sales", status: "Active", reach: "45K", roi: "+32%" },
-                                            { name: "Emails", status: "Done", reach: "28K", roi: "+18%" },
-                                            { name: "Ads", status: "Active", reach: "62K", roi: "+45%" },
+                                            { name: "Perfume", status: "Active", reach: "45K", roi: "+32%" },
+                                            { name: "Face Wash", status: "Done", reach: "28K", roi: "+18%" },
+                                            { name: "Shampoo", status: "Active", reach: "62K", roi: "+45%" },
                                         ].map((campaign) => (
                                             <div key={campaign.name} className="grid grid-cols-4 text-sm py-2 border-t border-border/50">
                                                 <div>{campaign.name}</div>
@@ -122,15 +122,15 @@ const Analysis = () => {
                                     {/* Audience Table */}
                                     <div className="space-y-2">
                                         <div className="grid grid-cols-4 text-sm text-muted-foreground py-2">
-                                            <div>Channel</div>
+                                            <div>City</div>
                                             <div>Users</div>
-                                            <div>Sessions</div>
+                                            <div>Re-purchase</div>
                                             <div>Conv. Rate</div>
                                         </div>
                                         {[
-                                            { channel: "Social", users: "32K", sessions: "45K", rate: "3.2%" },
-                                            { channel: "Email", users: "28K", sessions: "36K", rate: "4.5%" },
-                                            { channel: "Direct", users: "15K", sessions: "22K", rate: "5.1%" },
+                                            { channel: "New Delhi", users: "32K", sessions: "45K", rate: "3.2%" },
+                                            { channel: "Bhopal", users: "28K", sessions: "36K", rate: "4.5%" },
+                                            { channel: "Jaipur", users: "15K", sessions: "22K", rate: "5.1%" },
                                         ].map((metric) => (
                                             <div key={metric.channel} className="grid grid-cols-4 text-sm py-2 border-t border-border/50">
                                                 <div>{metric.channel}</div>
