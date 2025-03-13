@@ -43,7 +43,7 @@ const Footer = () => {
                             <div className="flex items-center gap-2">
                                 <Image
                                     src="/favicon.svg"
-                                    alt="PropEase"
+                                    alt="Qrazy"
                                     width={32}
                                     height={32}
                                 />

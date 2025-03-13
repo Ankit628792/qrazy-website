@@ -81,7 +81,7 @@ const Navbar = () => {
                         transition={{ duration: 0.2 }}
                     >
                         <Link href="/" className="flex items-center gap-2">
-                            <Icons.logo className="w-max h-6" />
+                            <img src="/favicon.svg" className="w-6 h-6" />
                             <h1>Qrazy</h1>
                         </Link>
                     </motion.div>
