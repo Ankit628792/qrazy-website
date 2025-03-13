@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Linkedin, Twitter, Youtube } from 'lucide-react';
+import { Facebook, Heart, Instagram, Linkedin, Twitter, Youtube } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import AnimationContainer from './global/animation-container';
@@ -55,7 +55,11 @@ const Footer = () => {
                                 Protect, Market & Grow Your Brand <br /> with Smart QR Technology
                             </p>
                             <div className="mt-4 text-sm text-muted-foreground">
-                                <p>support@qrazy.in</p>
+                                <Link href={"https://www.google.com/search?q=Ankit628792"} target='_blank'>
+                                    <span className='text-neutral-200 text-sm flex items-center'>
+                                        Made by @Ankit628792 with <Heart className='w-3.5 h-3.5 ml-1 fill-primary text-primary' />
+                                    </span>
+                                </Link>
                             </div>
                             <div className="flex items-center gap-4 mt-6">
                                 {SOCIAL_LINKS.map((social, index) => (

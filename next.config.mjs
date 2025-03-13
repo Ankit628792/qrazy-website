@@ -1,11 +1,17 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: [
-      'utfs.io',
-      'img.clerk.com',
-      'subdomain',
-    ],
+    remotePatterns: [
+      {
+        "hostname": "utfs.io"
+      },
+      {
+        "hostname": "img.clerk.com"
+      },
+      {
+        "hostname": "subdomain"
+      }
+    ]
   },
   reactStrictMode: false,
 };
